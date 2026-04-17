@@ -1,7 +1,7 @@
 const {ImageKit} = require('@imagekit/nodejs');
 
 const imagekit = new ImageKit({
-    privateKey: 'private_627TkXIvzB1GnEbzARSeZPHGkaQ='
+    privateKey: process.env.IMAGE_KIT_PRIVATE_KEY,
 })
 
 async function uploadFile(buffer){
