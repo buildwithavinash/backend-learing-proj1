@@ -4,9 +4,11 @@ const mongoose = require('mongoose')
 const postModel = require("./models/post.model");
 const uploadFile = require("./services/storage.service");
 const app = express();
+const cors = require('cors')
 
 // middleware
 app.use(express.json());
+app.use(cors());
 const upload = multer({ storage: multer.memoryStorage() });
 
 
